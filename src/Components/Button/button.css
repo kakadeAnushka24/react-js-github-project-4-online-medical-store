@@ -1,0 +1,14 @@
+.btn{
+    width: 80px;
+    height: 30px;
+    /* background-color: rgb(0, 128, 0); */
+    border-radius: 10px;
+}
+.know-more-btn{
+    cursor:pointer;
+    background-color: rgb(74, 74, 117);
+    color:white;
+    border:none;
+    text-align: center;
+    font-weight: 3px;
+}

@@ -5,7 +5,8 @@ import Products from './views/Products/products.jsx'
 import Order from './views/Order/order.jsx'
 import Login from './views/Login/login.jsx'
 import Signup from './views/Signup/signup.jsx'
-
+import ProductCard from './Views/Products/ProductCard/productcard.jsx'
+import ProductCardDetails from './Views/Products/ProductCardDetails/productcarddetails.jsx'
 
 const root = createRoot(document.getElementById('root'))
 root.render(
@@ -16,6 +17,7 @@ root.render(
         <Route path="/order" element={<Order />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/products/:productId" element={<ProductCardDetails />} />
       </Routes> 
   </BrowserRouter>
 )

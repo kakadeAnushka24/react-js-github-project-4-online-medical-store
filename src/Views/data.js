@@ -1,4 +1,4 @@
-[
+const PRODUCTS = [
   {
     "productId": "1",
     "name": "Paracetamol",
@@ -464,4 +464,6 @@
       "https://via.placeholder.com/300x300?text=Dexorange+4"
     ]
   }
-]
+];
+
+export default PRODUCTS;
