@@ -178,3 +178,18 @@
   padding: 10px;
 }
 
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .features,
+  .products-section,
+  .categories-section {
+    padding: 40px 20px;
+  }
+}
