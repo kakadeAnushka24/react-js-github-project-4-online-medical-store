@@ -1,9 +1,9 @@
-/* .product-card-conatainer{
+.product-card-conatainer{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row; 
-    background-color: rgb(238, 238, 238);   
-} */
+    background-color: rgb(238, 238, 238);    
+}
 
 .product-card{
     border-radius: 10px;
