@@ -3,6 +3,7 @@ import "./products.css";
 import { useState, useEffect } from "react";
 import ProductCard from "./ProductCard/productcard.jsx";
 import Navbar from "../../Components/Navbar/navbar.jsx";
+import Footer from "../../Components/Footer/footer.jsx";
 import Input from "../../Components/Input/input.jsx";
 import{ Heading} from "../../Components/Heading/heading.jsx";
 
@@ -54,6 +55,7 @@ function Products() {
           return <ProductCard product={product} />;
         })}
       </div>
+      <Footer />
     </div>
   );
 }

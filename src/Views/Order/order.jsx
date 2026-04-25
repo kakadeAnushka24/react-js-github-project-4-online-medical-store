@@ -71,9 +71,9 @@ const total = product.totalPrice + 20;
           <div className="order-summary">
             <h3>Order Summary</h3>
             <p>{product.name} x {product.quantity}</p>
-            <p>Price: ₹{product.price}</p>
-            <p>Delivery: ₹20</p>
-            <h4><p>Price: ₹{product.totalPrice}</p></h4>
+            <p>Price: ${product.price}</p>
+            <p>Delivery: $20</p>
+            <h4><p>Price: ${product.totalPrice}</p></h4>
           </div>
 
           {/* Form */}

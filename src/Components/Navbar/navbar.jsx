@@ -10,12 +10,7 @@ function Navbar() {
         <img src={logo} alt="logo" />
         <span className='main-title'>MedicalStore</span>
       </Link>
-
-      {/* <div className='project-main-title'>
-              <img src={logo} alt="logo" />
-              <span className='main-title'>MedicalStore</span>
-            </div> */}
-
+      
       <div className='navbar-menu-container'>
         <Link to="/" className='nav-menu'>Home</Link>
         <Link to="/products" className='nav-menu'>Products</Link>
