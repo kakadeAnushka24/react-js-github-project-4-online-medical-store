@@ -3,6 +3,7 @@ import { BrowserRouter ,Routes,Route} from 'react-router-dom'
 import Home from './Views/home/home.jsx'
 import Products from './views/Products/products.jsx'
 import Order from './Views/order/order.jsx'
+import Contact from './Views/Contact/contact.jsx'
 import Login from './Views/login/login.jsx'
 import Signup from './Views/signup/signup.jsx'
 import ProductCard from './Views/Products/productCard/productcard.jsx'
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<Home />} /> 
         <Route path="/products" element={<Products />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/order/:productId" element={<Order />} />
