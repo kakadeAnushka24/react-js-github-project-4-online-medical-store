@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { Eye, EyeOff, Mail, Lock, AlertCircle } from "lucide-react";
 import "./Login.css";
 import Navbar from "../../Components/navbar/navbar.jsx";
 import Footer from "../../Components/footer/footer.jsx";
 
 const validateEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 };
 
 const validatePassword = (password) => {
@@ -15,13 +15,15 @@ const validatePassword = (password) => {
 
 const getStorageKey = () => "loginUser_v1";
 
-const saveUserToStorage = (email, rememberMe = false) => {
-  const userData = {
-    email,
-    loginTime: new Date().toISOString(),
-    rememberMe,
-  };
-  localStorage.setItem(getStorageKey(), JSON.stringify(userData));
+const saveUserToStorage = (email, rememberMe) => {
+  localStorage.setItem(
+    getStorageKey(),
+    JSON.stringify({
+      email,
+      rememberMe,
+      loginTime: new Date().toISOString(),
+    })
+  );
 };
 
 const getUserFromStorage = () => {
@@ -34,6 +36,8 @@ const getUserFromStorage = () => {
 };
 
 export default function LoginPage() {
+  const navigate = useNavigate(); // ✅ React navigation
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -43,8 +47,9 @@ export default function LoginPage() {
 
   useEffect(() => {
     const savedUser = getUserFromStorage();
-    if (savedUser && savedUser.rememberMe) {
+    if (savedUser?.rememberMe) {
       setEmail(savedUser.email);
+      setRememberMe(true);
     }
   }, []);
 
@@ -71,9 +76,12 @@ export default function LoginPage() {
 
     setTimeout(() => {
       saveUserToStorage(email, rememberMe);
+
       alert("Login Successful 🎉");
-      window.location.href = "/";
-  setLoading(false);
+
+      navigate("/"); // ✅ No page reload
+
+      setLoading(false);
     }, 500);
   };
 
@@ -97,6 +105,8 @@ export default function LoginPage() {
           )}
 
           <form onSubmit={handleLogin} className="login-form">
+
+            {/* Email */}
             <div className="form-group">
               <label>Email</label>
               <div className="input-wrapper">
@@ -147,14 +157,15 @@ export default function LoginPage() {
               {loading ? "Logging in..." : "Login"}
             </button>
           </form>
-
+          
           <div className="signup-line">
             Don't have an account?{" "}
-            <a href="/signup">Sign Up</a>
+            <Link to="/signup">Sign Up</Link>
           </div>
 
         </div>
       </div>
+
       <Footer />
     </>
   );

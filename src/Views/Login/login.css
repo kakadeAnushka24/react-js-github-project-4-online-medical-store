@@ -1,51 +1,46 @@
 .login-page {
   min-height: 100vh;
   display: flex;
-  align-items: center;
   justify-content: center;
- padding: 110px 20px 40px;
-font-family: 'Segoe UI', sans-serif;
+  align-items: center;
+  background: #f4f7fb;
+  padding: 100px 20px 40px;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .login-card {
-  width: 90%;
-  max-width: 650px;      
-  min-height: 520px;    
-  background: #b5e8ca;
-  border-radius: 24px;
-  padding: 60px;
- display: flex;
-  flex-direction: column;
-  justify-content: center;
-box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
-  animation: fadeIn 0.4s ease;
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .login-header {
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .login-header h1 {
-  font-size: 30px;
-  color: #111;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 .login-header p {
-  color: #666;
   font-size: 14px;
+  color: #666;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 
 .form-group label {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
 }
 
 .input-wrapper {
@@ -54,23 +49,20 @@ box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
 
 .input-wrapper input {
   width: 100%;
-  padding: 14px 45px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  background: #f9fafb;
-  font-size: 14px;
+  padding: 12px 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
   outline: none;
-  transition: 0.3s;
+  font-size: 14px;
 }
 
 .input-wrapper input:focus {
   border-color: #2575fc;
-  box-shadow: 0 0 0 3px rgba(37, 117, 252, 0.2);
 }
 
 .input-icon {
   position: absolute;
-  left: 12px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
   color: #888;
@@ -81,8 +73,8 @@ box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
+  background: none;
   border: none;
-  background: transparent;
   cursor: pointer;
 }
 
@@ -94,15 +86,13 @@ box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
 }
 
 .primary-button {
-  margin-top: 10px;
-  padding: 14px;
+  padding: 12px;
   border: none;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #2575fc;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .primary-button:hover {
@@ -112,57 +102,35 @@ box-shadow: 0 25px 80px rgba(0, 0, 0, 0.25);
 .message-box {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 14px;
-}
-
-.error-message {
+  gap: 8px;
   background: #ffe5e5;
   color: #d32f2f;
-}
-
-.success-message {
-  background: #e6f7ec;
-  color: #2e7d32;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 14px;
 }
 
 .signup-line {
-  text-align: center;
   margin-top: 15px;
-  font-size: 14px;
-  color: #555;
-}
-
-.logged-in-panel {
   text-align: center;
+  font-size: 14px;
 }
 
-.logged-in-panel h1 {
-  color: #0a0b0a;
+.signup-line a {
+  color: #2575fc;
   text-decoration: none;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.signup-line a:hover {
+  text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .login-card {
-    width: 95%;
-    padding: 30px 20px;
-    min-height: auto;
+    padding: 20px;
   }
 
   .login-header h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
