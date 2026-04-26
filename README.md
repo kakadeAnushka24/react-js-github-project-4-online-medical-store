@@ -98,41 +98,6 @@
 
 ---
 
-## 📂 Project Structure
-
-```bash
-medicalstore/
-│
-├── src/
-│   ├── components/
-│   │   ├── Button.jsx
-│   │   ├── Navbar.jsx
-│   │   ├── Footer.jsx
-│   │   ├── Heading.jsx
-│   │   ├── Input.jsx
-│   │
-│   ├── Views/
-│   │   ├── Home.jsx
-│   │   ├── Login.jsx
-│   │   ├── Signup.jsx
-│   │   ├── Order.jsx
-│   │   ├── Products/
-│   │   │   ├── Products.jsx
-│   │   │   ├── ProductCard/
-│   │   │   │   ├── ProductCard.jsx
-│   │   │   ├── ProductCardDetails/
-│   │   │   │   ├── ProductCardDetails.jsx
-│   │
-│   ├── App.jsx
-│   ├── main.jsx
-│
-├── README.md
-└── package.json
-```
-```
-
----
-
 ## ⚙️ Installation & Setup
 
 ```bash
