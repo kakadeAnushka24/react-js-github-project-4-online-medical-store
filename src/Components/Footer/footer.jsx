@@ -4,6 +4,7 @@ import logo from "../../assets/logo.png";
 import { Phone, Mail, MessageCircle} from "lucide-react";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 
+
 function Footer() {
     return (
         <div className="footer-container">
