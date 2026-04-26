@@ -1,15 +1,14 @@
-btn{
-    border-radius: 7px;
-    background-color: #2e7d32;
-    border: none;
-}
+
 .buy-now-btn{
     margin-left: 10px;
     height: 30px;
     color: white;
-   padding: 8px;
+   padding: 5px;
     text-align: center;
     font-size: 14px;
+    background-color: #2e7d32;
+    border-radius: 10px;
+    border: none;
 }
 .buy-now-btn:hover{
     background-color:#218838;
@@ -21,6 +20,10 @@ btn{
    padding: 8px;
     text-align: center;
     font-size: 14px;
+    background-color: #2e7d32;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
 }
 .know-more-btn:hover{
     background-color:#218838;
