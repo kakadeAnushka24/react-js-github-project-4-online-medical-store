@@ -1,9 +1,9 @@
 .navbar-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #1f572c;
-    padding: 5px 0px;
+    padding: 10px 40px;
     position: sticky;
     top: 0;
 }
@@ -11,7 +11,9 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 900px;
+    width: 100%;
+    max-width: 900px;
+    flex-wrap: wrap;
 }
 .nav-menu{
     color: white;
@@ -29,4 +31,22 @@
     color: white;
     font-size: 22px;
     font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-menu-container {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-menu {
+        font-size: 18px;
+        padding: 8px 0;
+    }
 }
