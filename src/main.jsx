@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter ,Routes,Route} from 'react-router-dom'
 import Home from './Views/home/home.jsx'
-import Products from './views/Products/products.jsx'
+import Products from './Views/Products/products.jsx'
 import Order from './Views/order/order.jsx'
 import Contact from './Views/Contact/contact.jsx'
 import Login from './Views/login/login.jsx'
